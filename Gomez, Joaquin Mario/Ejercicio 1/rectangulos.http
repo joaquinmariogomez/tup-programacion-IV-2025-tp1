@@ -1,0 +1,36 @@
+@url=http://localhost:3000/rectangulos
+
+### Crear un rectángulo
+POST {{url}}
+Content-Type: application/json
+
+{
+    "ancho": 12,
+    "alto": 5
+}
+
+### Crear un cuadrado (igual ancho y alto)
+POST {{url}}
+Content-Type: application/json
+
+{
+    "ancho": 7,
+    "alto": 7
+}
+
+### Crear con datos inválidos (ancho negativo)
+POST {{url}}
+Content-Type: application/json
+
+{
+    "ancho": -3,
+    "alto": 4
+}
+
+### Lista de todos los cálculos
+GET {{url}}
+
+### Obtener un cálculo por id 
+GET {{url}}/0
+
+
