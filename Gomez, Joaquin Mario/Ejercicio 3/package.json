@@ -1,0 +1,15 @@
+{
+  "name": "ejercicio-3",
+  "version": "1.0.0",
+  "description": "Desarrollar una API con ExpressJS de un listado de tareas completadas o por\r completar. Guardar el nombre de la tarea y si fue completada o no en un arreglo\r interno. Verificar en la API al momento de crear que no se repitan tareas con el\r mismo nombre. Agregar un filtro que devuelva tareas completadas o sin completar",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,35 @@
+@url = http://localhost:3000/tareas
+
+### Crear tarea pendiente (default)
+POST {{url}}
+Content-Type: application/json
+
+{
+  "nombre": "Estudiar para el parcial"
+}
+
+### Crear tarea ya completada
+POST {{url}}
+Content-Type: application/json
+
+{
+  "nombre": "Estudiar Estadistica",
+  "estado": true
+}
+
+### Intentar duplicado (error 409)
+POST {{url}}
+Content-Type: application/json
+
+{
+  "nombre": "estudiar para el parcial"
+}
+
+### Listar todas las tareas
+GET {{url}}
+
+### Listar completadas (booleano)
+GET {{url}}?estado=true
+
+### Listar pendientes (booleano)
+GET {{url}}?estado=false
