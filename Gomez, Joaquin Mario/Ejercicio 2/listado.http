@@ -1,0 +1,53 @@
+@url = http://localhost:3000/alumnos
+
+### Crear alumno
+POST {{url}}
+Content-Type: application/json
+
+{
+    "nombre": "Bianca Tagliaferri",
+    "notas": [8, 7, 9]
+}
+
+### Crear otro alumno
+POST {{url}}
+Content-Type: application/json
+
+{
+    "nombre": "Gabriel Diaz",
+    "notas": [6, 6, 7]
+}
+
+
+### Crear otro alumno mas
+POST {{url}}
+Content-Type: application/json
+
+{
+    "nombre": "Joaquin Gomez",
+    "notas": [2, 3, 5]
+}
+### Ver Lista de Alumnos
+GET {{url}}
+
+
+### Ver Lista de Alumnos
+GET {{url}}/?nombre=gab
+
+### Modificar alumno por nombre 
+# Cambia nombre y/o las 3 notas. Verifica unicidad.
+PUT {{url}}/?nombre=gab
+Content-Type: application/json
+
+{
+    "nombre": "Pepito Cambiaso",
+    "notas": [7, 8, 7]
+}
+
+
+
+### Borrar alumno por nombre 
+DELETE {{url}}/?nombre=pepito
+
+
+
